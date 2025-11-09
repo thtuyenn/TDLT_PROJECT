@@ -13,3 +13,15 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonmulti.clicked.connect(self.process_X)
         self.pushButtonminus.clicked.connect(self.process_minus)
         self.pushButtondivide.clicked.connect(self.process_divide)
+
+    def process_sum(self):
+        a = float(self.lineEditA.text())
+        b = float(self.lineEditB.text())
+        result = "{0}+{1}={2}".format(a, b, a + b)
+        self.lineEditResult.setText(result)
+
+    def process_X(self):
+        a = float(self.lineEditA.text())
+        b = float(self.lineEditB.text())
+        result = "{0}*{1}={2}".format(a, b, a * b)
+        self.lineEditResult.setText(result)
