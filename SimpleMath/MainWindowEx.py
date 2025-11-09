@@ -25,3 +25,19 @@ class MainWindowEx(Ui_MainWindow):
         b = float(self.lineEditB.text())
         result = "{0}*{1}={2}".format(a, b, a * b)
         self.lineEditResult.setText(result)
+
+    def process_minus(self):
+        a = float(self.lineEditA.text())
+        b = float(self.lineEditB.text())
+        result = "{0}-{1}={2}".format(a, b, a - b)
+        self.lineEditResult.setText(result)
+
+    def process_divide(self):
+        a = float(self.lineEditA.text())
+        b = float(self.lineEditB.text())
+        if b == 0:
+            result = "ERROR"
+            self.lineEditResult.setText(result)
+        else:
+            result = "{0}/{1}={2}".format(a, b, a / b)
+            self.lineEditResult.setText(result)
